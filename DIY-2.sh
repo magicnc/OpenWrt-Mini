@@ -7,6 +7,7 @@
 
 # # 2-设置密码为空
 # sed -i '/CYXluq4wUazHjmCDBCqXF/d' package/lean/default-settings/files/zzz-default-settings
+sed -i 's/192.168.1.1/192.168.6.1/g' package/base-files/files/bin/config_generate                       # 修改IP
 sed -i "s/'OpenWrt'/'magicn'/g" package/base-files/files/bin/config_generate                            # 设置主机名
 # 修改插件名字
 # sed -i 's/"aMule设置"/"电驴下载"/g' `grep "aMule设置" -rl ./`
