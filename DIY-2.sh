@@ -24,3 +24,6 @@ sed -i 's/"CPU 性能优化调节"/"CPU调节"/g' `grep "CPU 性能优化调节"
 # sed -i 's/"管理权"/"改密码"/g' `grep "管理权" -rl ./`
 # sed -i 's/"带宽监控"/"监控"/g' `grep "带宽监控" -rl ./`
 # sed -i 's/"Argon 主题设置"/"Argon设置"/g' `grep "Argon 主题设置" -rl ./`
+
+# 移动 短信 到 “网络” 子菜单 /cgi-bin/luci/admin/modem/sms
+sed -i 's/services/network/g' feeds/luci/applications/luci-app-sms-tool/root/usr/share/luci/menu.d/luci-app-sms-tool
