@@ -33,6 +33,8 @@ cp -rf ../Modem-Support/meig_QMI_WWAN/* meig_QMI_WWAN
 cp -rf ../Modem-Support/quectel_MHI/* quectel_MHI
 # # cp -rf ../Modem-Support/luci-app-hypermodem/* luci-app-hypermodem
 
+
+rm -rf ../package/luci-app-vsftpd
 # 5G模组短信插件
 rm -rf ../package/luci-app-sms-tool
 mkdir luci-app-sms-tool
