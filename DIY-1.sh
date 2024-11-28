@@ -16,6 +16,18 @@ pushd Modem-Support
 git clone --depth=1 https://github.com/Siriling/5G-Modem-Support .
 popd
 
+mkdir diy_poweroffdevice
+pushd diy_poweroffdevice
+git clone --depth=1 https://github.com/sirpdboy/luci-app-poweroffdevice .
+popd
+
+mkdir diy_advancedplus
+pushd diy_advancedplus
+git clone --depth=1 https://github.com/sirpdboy/luci-app-advancedplus .
+popd
+
+
+
 pushd package
 # 5G通信模组拨号工具
 mkdir quectel_QMI_WWAN
@@ -45,4 +57,11 @@ cp -rf ../Modem-Support/sms-tool/* sms-tool
 cp -rf ../Modem-Support/luci-app-sms-tool/* luci-app-sms-tool
 cp -rf ../Modem-Support/luci-app-modem/* luci-app-modem
 cp -rf ../Modem-Support/luci-app-pcimodem/* luci-app-pcimodem
+
+mkdir diy_poweroffdevice
+cp -rf ../Modem-diy_poweroffdevice/luci-app-poweroffdevice/* luci-app-poweroffdevice
+
+mkdir diy_advancedplus
+cp -rf ../diy_advancedplus-Support/luci-app-advancedplus/* luci-app-advancedplus
+
 popd
