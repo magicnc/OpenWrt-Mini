@@ -37,9 +37,12 @@ cp -rf ../Modem-Support/quectel_MHI/* quectel_MHI
 rm -rf ../package/luci-app-vsftpd
 # 5G模组短信插件
 rm -rf ../package/luci-app-sms-tool
+rm -rf ../package/luci-app-pcimodem
 mkdir luci-app-sms-tool
 mkdir luci-app-modem
+mkdir luci-app-pcimodem
 cp -rf ../Modem-Support/sms-tool/* sms-tool
 cp -rf ../Modem-Support/luci-app-sms-tool/* luci-app-sms-tool
 cp -rf ../Modem-Support/luci-app-modem/* luci-app-modem
+cp -rf ../Modem-Support/luci-app-pcimodem/* luci-app-pcimodem
 popd
