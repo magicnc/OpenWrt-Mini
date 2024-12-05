@@ -1,4 +1,4 @@
-name:  OpenWrt-aib
+name:  OpenWrt-h68k
 
 on: 
   workflow_dispatch:
