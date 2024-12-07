@@ -106,7 +106,7 @@ jobs:
       run: |
         cd openwrt
         echo -e "$(nproc) thread compile"
-        make -j$(nproc) || make -j1 || make -j1 V=s
+        make -j$(nproc) || make -j8 || make -j8 V=s
         echo "status=success" >> $GITHUB_OUTPUT
         grep '^CONFIG_TARGET.*DEVICE.*=y' .config | sed -r 's/.*DEVICE_(.*)=y/\1/' > DEVICE_NAME
         [ -s DEVICE_NAME ] && echo "DEVICE_NAME=_$(cat DEVICE_NAME)" >> $GITHUB_ENV
@@ -151,7 +151,7 @@ jobs:
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
         echo "OpenWrt-Mini_h68k_old-合集版（支持ipv6）" >> release.txt
-        echo "默认地址：192.168.1.1" >> release.txt
+        echo "默认地址：192.168.6.1" >> release.txt
         echo "默认密码：password" >> release.txt
         echo "插件清单：PassWall，Lucky大吉，MosDNS，上网时间控制，KMS 服务器，UPnP" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
