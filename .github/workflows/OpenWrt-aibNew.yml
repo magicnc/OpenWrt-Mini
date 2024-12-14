@@ -1,4 +1,4 @@
-name:  OpenWrt-aib
+name:  OpenWrt-aibNew
 
 on: 
   workflow_dispatch:
