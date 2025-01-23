@@ -150,8 +150,8 @@ jobs:
       run: |
         echo "release_tag=${{ env.TAG_TIME }}" >> $GITHUB_OUTPUT
         touch release.txt
-        echo "OpenWrt-Mini_AIB-合集版（支持ipv6）" >> release.txt
-        echo "默认地址：192.168.1.1" >> release.txt
+        echo "OpenWrt-Mini_aib_new-合集版（支持ipv6）" >> release.txt
+        echo "默认地址：192.168.6.1" >> release.txt
         echo "默认密码：password" >> release.txt
         echo "插件清单：PassWall，Lucky大吉，MosDNS，上网时间控制，KMS 服务器，UPnP" >> release.txt
         echo "status=success" >> $GITHUB_OUTPUT
@@ -162,7 +162,7 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.RELEASE_TOKEN }}
       with:
-        name: ${{ env.FILE_TIME }} -aibNew合集版
+        name: ${{ env.FILE_TIME }} -aib_new合集版
         tag_name: ${{ steps.tag.outputs.release_tag }}
         body_path: release.txt
         files: ${{ env.FIRMWARE }}/* 
