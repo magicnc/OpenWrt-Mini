@@ -65,3 +65,5 @@ mkdir diy_advancedplus
 cp -rf ../diy_advancedplus-Support/luci-app-advancedplus/* luci-app-advancedplus
 
 popd
+
+sed -i '$a src-git qmodem https://github.com/FUjr/modem_feeds.git;main' feeds.conf.default
